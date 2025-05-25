@@ -220,6 +220,38 @@
                 aria-label="YouTube"
                 >y</a
               >
+
+              <!-- Contact Form -->
+<form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="696f9140-c9ba-4c15-92ae-21337af3aa80" />
+
+  <div class="form-group">
+    <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+  </div>
+
+  <div class="form-group">
+    <input type="email" name="email" class="form-control" placeholder="Your Email" required />
+  </div>
+
+  <div class="form-group">
+    <input type="text" name="subject" class="form-control" placeholder="Subject" />
+  </div>
+
+  <div class="form-group">
+    <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+  </div>
+
+  <!-- Anti-spam -->
+  <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+  <button type="submit" class="btn-submit">Send Message</button>
+
+  <!-- Success Message -->
+  <p id="successMessage" style="display:none; color:green; margin-top:10px;">
+    ✅ Thanks! Your message has been sent successfully.
+  </p>
+</form>
+
             </div>
           </div>
         </div>
@@ -345,5 +377,33 @@
 
       <script src="script.js"></script>
     </footer>
+
+    <script>
+  const form = document.getElementById("contactForm");
+  const successMessage = document.getElementById("successMessage");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        Accept: "application/json"
+      }
+    });
+
+    if (response.ok) {
+      form.reset();
+      successMessage.style.display = "block";
+    } else {
+      alert("There was an error submitting the form. Please try again.");
+    }
+  });
+</script>
+
+    
   </body>
 </html>
