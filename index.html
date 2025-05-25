@@ -122,141 +122,81 @@
       </div>
     </section>
 
-    <!-- contact-section    -->
-    <section id="contact" class="section contact">
-      <div class="container">
-        <div class="section-title">
-          <h2>Contact Us</h2>
-          <p>Reach out for collaborations or to discuss your project</p>
+   <!-- contact-section -->
+<section id="contact" class="section contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contact Us</h2>
+      <p>Reach out for collaborations or to discuss your project</p>
+    </div>
+    <div class="contact-grid">
+      
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="696f9140-c9ba-4c15-92ae-21337af3aa80" />
+
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+          </div>
+
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required />
+          </div>
+
+          <div class="form-group">
+            <input type="text" name="subject" class="form-control" placeholder="Subject" />
+          </div>
+
+          <div class="form-group">
+            <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+          </div>
+
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+          <button type="submit" class="btn-submit">Send Message</button>
+
+          <p id="successMessage" style="display:none; color:green; margin-top:10px;">
+            ✅ Thanks! Your message has been sent successfully.
+          </p>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div class="contact-info-item">
+          <div class="contact-icon">📱</div>
+          <div class="contact-details">
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/message/Z4VNJSBV7JSYM1">+447449961382</a></p>
+          </div>
         </div>
-        <div class="contact-grid">
-          <div class="contact-form">
-            <form id="contactForm">
-              <div class="form-group">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                   <input type="hidden" name="access_key" value="696f9140-c9ba-4c15-92ae-21337af3aa80">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Your Email"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject" />
-              </div>
-              <div class="form-group">
-                <textarea
-                  class="form-control"
-                  placeholder="Your Message"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="btn-submit">Send Message</button>
-            </form>
+        <div class="contact-info-item">
+          <div class="contact-icon">📧</div>
+          <div class="contact-details">
+            <h4>Email</h4>
+            <p><a href="mailto:info@kaafistudio.com">info@kaafistudio.com</a></p>
           </div>
-          <div class="contact-info">
-            <div class="contact-info-item">
-              <div class="contact-icon">📱</div>
-              <div class="contact-details">
-                <h4>WhatsApp</h4>
-                <p>
-                  <a href="https://wa.me/message/Z4VNJSBV7JSYM1"
-                    >+447449961382</a
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div class="contact-icon">📧</div>
-              <div class="contact-details">
-                <h4>Email</h4>
-                <p>
-                  <a href="mailto:info@kaafistudio.com">info@kaafistudio.com</a>
-                </p>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div class="contact-icon">🌐</div>
-              <div class="contact-details">
-                <h4>Social Media</h4>
-                <p>Follow us on our social platforms</p>
-              </div>
-            </div>
-            <div class="social-links">
-              <a
-                href="https://web.facebook.com/kaafistudio"
-                class="social-link"
-                target="_blank"
-                aria-label="Facebook"
-                >f</a
-              >
-              <a
-                href="https://tiktok.com/@kaafistudio"
-                class="social-link"
-                target="_blank"
-                aria-label="TikTok"
-                >t</a
-              >
-              <a
-                href="https://twitter.com/Kaafistudio"
-                class="social-link"
-                target="_blank"
-                aria-label="Twitter"
-                >x</a
-              >
-              <a
-                href="https://www.youtube.com/@Kaafistudio"
-                class="social-link"
-                target="_blank"
-                aria-label="YouTube"
-                >y</a
-              >
-
-              <!-- Contact Form -->
-<form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="696f9140-c9ba-4c15-92ae-21337af3aa80" />
-
-  <div class="form-group">
-    <input type="text" name="name" class="form-control" placeholder="Your Name" required />
-  </div>
-
-  <div class="form-group">
-    <input type="email" name="email" class="form-control" placeholder="Your Email" required />
-  </div>
-
-  <div class="form-group">
-    <input type="text" name="subject" class="form-control" placeholder="Subject" />
-  </div>
-
-  <div class="form-group">
-    <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
-  </div>
-
-  <!-- Anti-spam -->
-  <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
-
-  <button type="submit" class="btn-submit">Send Message</button>
-
-  <!-- Success Message -->
-  <p id="successMessage" style="display:none; color:green; margin-top:10px;">
-    ✅ Thanks! Your message has been sent successfully.
-  </p>
-</form>
-
-            </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">🌐</div>
+          <div class="contact-details">
+            <h4>Social Media</h4>
+            <p>Follow us on our social platforms</p>
           </div>
+        </div>
+        <div class="social-links">
+          <a href="https://web.facebook.com/kaafistudio" class="social-link" target="_blank" aria-label="Facebook">f</a>
+          <a href="https://tiktok.com/@kaafistudio" class="social-link" target="_blank" aria-label="TikTok">t</a>
+          <a href="https://twitter.com/Kaafistudio" class="social-link" target="_blank" aria-label="Twitter">x</a>
+          <a href="https://www.youtube.com/@Kaafistudio" class="social-link" target="_blank" aria-label="YouTube">y</a>
         </div>
       </div>
-    </section>
+      
+    </div>
+  </div>
+</section>
+
 
     <!-- about -->
 
